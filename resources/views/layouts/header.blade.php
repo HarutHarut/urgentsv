@@ -15,7 +15,6 @@
         <div class="row justify-content-center">
             <div class="col-lg-8 align-self-center">
                 <div class="topbar-left text-md-left text-center">
-                    @dump($image_path)
                     <span><img src="{{ $image_path }}/icon/clock-2.png" alt="img"><span>{{ translating('mot-sun') }}: {{ translating('9am-6am') }}</span></span>
                 </div>
             </div>
