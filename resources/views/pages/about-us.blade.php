@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-        @include('components.about-us.header')
+        <!-- @include('components.about-us.header') -->
         
         @include('components.about-us.description')
         
