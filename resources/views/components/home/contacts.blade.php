@@ -9,11 +9,17 @@
                         <p>{{ nl2br(e(translating('contacts-section-description'))) }}</p>
                         <a class="btn btn-white" href="{{ route('contacts', ['locale' => app()->getLocale()]) }}">{{ translating('contacts') }}<i class="fa fa-angle-double-right ml-2" aria-hidden="true"></i></a>
                     </div>
-                </div>   
+                </div>
             </div>
             <div class="col-lg-6">
                 <div class="free-contact-wrap">
-                    <h3 class="title">{{ translating('contact-information') }}</h3>
+{{--                    <h3 class="title">{{ translating('contact-information') }}</h3>--}}
+                    @if(app()->getLocale() == 'fr')
+                        <h3 class="title"><span class="text-gradient">Informations</span></h3>
+                    @else
+                        <h3 class="title"><span class="text-gradient">Contact</span> information</h3>
+                    @endif
+
                     @if(isset($phone_numbers) && count($phone_numbers) > 0)
                         <div class="free-contact-inner media align-items-center">
                             <div class="thumb">
@@ -59,9 +65,9 @@
                             </div>
                         </div>
                     @endif
-                </div>  
+                </div>
             </div>
         </div>
     </div>
 </div>
-<!-- Contacts End--> 
+<!-- Contacts End-->
