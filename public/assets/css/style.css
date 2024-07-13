@@ -4981,6 +4981,11 @@ button:hover, .hov-pointer{
   color: #6D6D6D;
   font-size: 14px;
   font-weight: 600;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .service-block .service-icon, .service-contact-block-icon {
