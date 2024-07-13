@@ -1,8 +1,13 @@
 <div class="contact-info-block">
     <div class="section-title text-center">
-        <h2 class="text-navy">{{ translating('contact-information') }}</h2>
+{{--        <h2 class="text-navy">{{ translating('contact-information') }}</h2>--}}
+        @if(app()->getLocale() == 'fr')
+            <h2 class="text-navy"><span class="text-gradient">Informations</span></h2>
+        @else
+            <h2 class="text-navy"><span class="text-gradient">Contact</span> information</h2>
+        @endif
         <p class="contact-info-description">{{ translating('contact-us-description') }}</p>
-    </div>  
+    </div>
     <div class="row contact-info-row position-relative px-4 pb-5 mt-5">
         <div class="col-lg-6">
             <div class="contact-info-box">

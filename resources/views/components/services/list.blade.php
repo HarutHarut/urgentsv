@@ -6,9 +6,15 @@
                 <div class="row justify-content-center my-5">
                     <div class="col-lg-8">
                         <div class="section-title text-center mb-4">
-                            <h2 class="title">{{ translating('services-title') }}</h2>
+{{--                            <h2 class="title">{{ translating('services-title') }}</h2>--}}
+
+                            @if(app()->getLocale() == 'fr')
+                                <h2 class="title">Prestations <span class="text-gradient">de service </span></h2>
+                            @else
+                                <h2 class="title">Top <span class="text-gradient">services </span>we offer</h2>
+                            @endif
                             <p>{{ translating('services-description') }}</p>
-                        </div>                    
+                        </div>
                     </div>
                 </div>
                 <div class="services-grid">

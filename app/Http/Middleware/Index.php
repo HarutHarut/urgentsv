@@ -64,7 +64,7 @@ class Index
 
             // Get site datas
             $site_data = SiteData::first();
-            
+
             // Get footer links
             $footer_links = FooterLinks::orderBy('position_id','asc')->get();
 
@@ -89,7 +89,7 @@ class Index
                 if(isset($decoded->region_code)){
 	                setcookie('user_city_code', $decoded->region_code, time() + (86400 * 30 * 365), "/"); // 86400 = 1 day
                 }
-                
+
 
             	if(isset($decoded) && isset($decoded->region_code)){
 	                $user_number = PhoneNumbers::where('location', $decoded->region_code)->first();
@@ -100,7 +100,7 @@ class Index
                 $user_number = PhoneNumbers::where('location', $_COOKIE['user_city_code'])->first();
             }
 
-            
+
 
             if($user_number == NULL){
                 $locc = 'value_'.app()->getLocale();
@@ -121,7 +121,8 @@ class Index
                 'footer_links' => $footer_links,
                 'services' => $services,
                 'user_number' => $user_number,
-                'image_path' => '/public/assets/img',
+//                'image_path' => '/public/assets/img',
+                'image_path' => '/assets/img',
                 'private_email' => 'info@intervention-urgence24-7.com',
             );
 
@@ -213,7 +214,7 @@ class Index
                 // Create request
                 $request->data = $data;
 
-                
+
                 // Send data to controller
                 return $next($request);
             }else{
