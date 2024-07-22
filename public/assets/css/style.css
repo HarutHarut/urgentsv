@@ -5362,6 +5362,12 @@ footer .logo img {
 
 .map-list-block {
   border-left: 1px dashed #B6E6FF;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+.map-list-block::-webkit-scrollbar {
+  display: none;
 }
 
 .map-list-block ul {
@@ -5692,6 +5698,13 @@ footer .logo img {
   }
   .footer-widget {
     margin-bottom: 24px;
+  }
+  .map-list-block {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  .map-list-block ul li, .map-list-block h4 {
+    margin: 12px auto;
   }
 }
 
