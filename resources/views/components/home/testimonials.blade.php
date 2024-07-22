@@ -22,7 +22,7 @@
         <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-right" alt="testimonials" />
     </div>
 
-    <div class="d-flex justify-content-center text-center count-block-grid">
+    <div class="d-flex justify-content-center text-center count-block-grid flex-wrap">
         <div class="count-block">
             <p class="text-gradient count-block-title">5,000+</p>
             <p class="count-block-text">Successful services</p>

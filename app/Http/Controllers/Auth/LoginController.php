@@ -72,7 +72,7 @@ class LoginController extends Controller
     }
 
     // Forget Password
-    public function reset_password(Request $request, $locale = 'hy', $email){
+    public function reset_password(Request $request, $locale = 'hy', $email = null){
         // Get data from middleware
         $data = $request->data;
 
@@ -209,7 +209,7 @@ class LoginController extends Controller
 
         // Get site datas
         $site_data = SiteData::first();
-        
+
         // Get footer links
         $footer_links = FooterLinks::orderBy('position_id','asc')->get();
 
@@ -233,7 +233,7 @@ class LoginController extends Controller
                 $curl_response = curl_exec($curl);
 
                 $decoded = json_decode($curl_response);
-                
+
                 if(isset($decoded->region_code)){
                     setcookie('user_city_code', $decoded->region_code, time() + (86400 * 30 * 365), "/"); // 86400 = 1 day
                 }
@@ -247,7 +247,7 @@ class LoginController extends Controller
                 $user_number = PhoneNumbers::where('location', $_COOKIE['user_city_code'])->first();
             }
 
-            
+
 
             if($user_number == NULL){
                 $locc = 'value_'.app()->getLocale();
@@ -269,7 +269,8 @@ class LoginController extends Controller
             'services' => $services,
             'seo' => $seo,
             'user_number' => $user_number,
-            'image_path' => '/public/assets/img',
+//            'image_path' => '/public/assets/img',
+            'image_path' => '/assets/img',
             'private_email' => 'manch.asatryan2020@gmail.com',
         );
 

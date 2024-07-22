@@ -22,8 +22,8 @@
 
             <div class="tab-content single-klm-work-tab-content well">
                 <div class="tab-pane active" id="tab-{{ $service->id }}">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
+                    <div class="row align-items-center service-details-row">
+                        <div class="col-lg-6 col-md-6">
                             <div class="single-details">
                                 <h1 class="mb-4">{{ $service->{'title_'.app()->getLocale()} }}</h1>
                                 <p><span class="text-primary">Urgent svc is an 24/7 emergency company,</span> offering highly qualified services</p>
@@ -44,7 +44,7 @@
                                 <p class="text-primary">Do you need an urgent service ?</p>
                             </div>
                         </div>
-                        <div class="col-lg-6 pl-5">
+                        <div class="col-lg-6 col-md-6 pl-lg-5">
                             <div class="work-vider-thumb" style="background: url({{ $image_path }}/service/img/{{ $service->img }})">
                                 @if( isset($service->video) && $service->video != null)
                                     <a data-toggle="modal" data-target="#exampleModalCenter{{ $service->id }}" class="video-btn-play play-btn mfp-iframe" tabindex="0"><i class="fa fa-play" aria-hidden="true"></i></a>

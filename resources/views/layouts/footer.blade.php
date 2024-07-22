@@ -13,7 +13,7 @@
 <footer class="footer-area">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-sm-6">
+            <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
                 <div class="footer-widget widget">
                     <a class="logo" href="{{ route('home', ['locale' => app()->getLocale()]) }}"><img src="{{ $image_path }}/footer-logo.png" alt="{{ $site_data->{'title_'.app()->getLocale()} }}"></a>
                     <p class="pr-5">Your trusted partner in emergency situations.</p>
@@ -43,7 +43,7 @@
                     @endif -->
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-4 col-sm-6">
+            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
                 <div class="footer-widget widget widget_link">
                     <h4 class="widget-title">{{ translating('links') }}</h4>
                     @if(isset($footer_links) && count($footer_links) > 0)
@@ -55,7 +55,7 @@
                     @endif
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-4 col-sm-6">
+            <div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
                 <div class="footer-widget widget widget_link">
                     <h4 class="widget-title">{{ translating('services') }}</h4>
                     @if(isset($services) && count($services) > 0)
@@ -102,7 +102,7 @@
         </div>
     </div>
 
-    <div class="footer-bottom">
+    <div class="footer-bottom px-2">
         <div class="container">
             <div class="row justify-content-between py-3">
                 @if(isset($social_accounts) && count($social_accounts) > 0)

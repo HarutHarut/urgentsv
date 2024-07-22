@@ -67,7 +67,7 @@ class RegisterController extends Controller
 
         // Get site datas
         $site_data = SiteData::first();
-        
+
         // Get footer links
         $footer_links = FooterLinks::orderBy('position_id','asc')->get();
 
@@ -91,11 +91,11 @@ class RegisterController extends Controller
                 $curl_response = curl_exec($curl);
 
                 $decoded = json_decode($curl_response);
-                
+
                 if(isset($decoded->region_code)){
                     setcookie('user_city_code', $decoded->region_code, time() + (86400 * 30 * 365), "/"); // 86400 = 1 day
                 }
-                
+
                 if(isset($decoded) && isset($decoded->region_code)){
 	                $user_number = PhoneNumbers::where('location', $decoded->region_code)->first();
             	}else{
@@ -105,7 +105,7 @@ class RegisterController extends Controller
                 $user_number = PhoneNumbers::where('location', $_COOKIE['user_city_code'])->first();
             }
 
-            
+
 
             if($user_number == NULL){
                 $locc = 'value_'.app()->getLocale();
@@ -127,7 +127,8 @@ class RegisterController extends Controller
             'services' => $services,
             'user_number' => $user_number,
             'seo' => $seo,
-            'image_path' => '/public/assets/img',
+//            'image_path' => '/public/assets/img',
+            'image_path' => '/assets/img',
             'private_email' => 'info@intervention-urgence24-7@gmail.com',
         );
 

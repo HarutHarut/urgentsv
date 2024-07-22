@@ -382,10 +382,10 @@
 	.blog-details-content .content h3 {
 	    font-size: 26px;
 	}
-	.location-map .mapouter,
+	/* .location-map .mapouter,
 	.location-map .gmap_canvas {
 		height: 370px;
-	}
+	} */
 }
 @media all and (max-width: 766px) {
 	.banner-area:after {
