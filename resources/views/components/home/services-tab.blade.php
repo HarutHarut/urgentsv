@@ -1,7 +1,7 @@
 @if(isset($services) && count($services) > 0)
     <div class="why-choose-area-menu-area pd-top-80 pd-bottom-50 mt-3">
         <div class="container">
-            <div class="row justify-content-center my-5">
+            <div class="row justify-content-center my-lg-5">
                 <div class="col-lg-8">
                     <div class="section-title text-center mb-4">
 {{--                        <h2 class="title">{{ translating('services-title') }}</h2>--}}

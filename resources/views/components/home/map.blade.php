@@ -10,10 +10,10 @@
 
         <p class="section-desc">Our services are available all over the France. You can just call and make an order.</p>
         <div class="row mt-5 justify-content-center">
-          <div class="col-lg-5">
+          <div class="col-lg-5 col-md-6">
               <img src="{{ $image_path }}/map/{{ $map->map }}" class="w-100 rounded responsive">
           </div>
-          <div class="col-lg-6 pl-5 ml-4 map-list-block">
+          <div class="col-lg-6 col-md-6 pl-lg-5 ml-lg-4 map-list-block">
             <div class="row">
               <div class="col-lg-6">
                 <h4>
