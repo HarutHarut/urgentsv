@@ -84,11 +84,11 @@
 	                    </li>
                     @endauth
 
-                    @guest
+                    <!-- @guest
                         <li>
                             <a href="{{ route('register', ['locale' => app()->getLocale()]) }}" class="sign-up-btn">{{ translating('register') }}</a>
                         </li>
-                    @endguest
+                    @endguest -->
                 </ul>
             </div>
         </div>

@@ -2,7 +2,7 @@
     @if(isset($services) && count($services) > 0)
         <div class="why-choose-area-menu-area pd-bottom-50 mt-3">
             <div class="container">
-                <h1 class="service-main-title text-center">Your <span class="text-gradient">trusted partner</span> in emergency situations.</h1>
+                <!-- <h1 class="service-main-title text-center">Your <span class="text-gradient">trusted partner</span> in emergency situations.</h1> -->
                 <div class="row justify-content-center my-lg-5">
                     <div class="col-lg-8">
                         <div class="section-title text-center mb-4">
@@ -11,7 +11,7 @@
                             @if(app()->getLocale() == 'fr')
                                 <h2 class="title">Prestations <span class="text-gradient">de service </span></h2>
                             @else
-                                <h2 class="title">Top <span class="text-gradient">services </span>we offer</h2>
+                                <h2 class="title">Our <span class="text-gradient">Services </span></h2>
                             @endif
                             <p>{{ translating('services-description') }}</p>
                         </div>
@@ -38,7 +38,7 @@
                                 </div>
                                 <h6>{{ $title }}</h6>
                                 <p>{{ $service->{'description_'.app()->getLocale()} }}</p>
-                                <a href="/{{app()->getLocale()}}/services/{{$service->url}}" class="learn-more-btn">Learn More</a>
+                                <a href="/{{app()->getLocale()}}/services/{{$service->url}}" class="learn-more-btn">Call Now for {{ $title }}</a>
                             </div>
                         </div>
                     @endforeach

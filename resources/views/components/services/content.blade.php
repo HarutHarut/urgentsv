@@ -26,7 +26,7 @@
                         <div class="col-lg-6 col-md-6">
                             <div class="single-details">
                                 <h1 class="mb-4">{{ $service->{'title_'.app()->getLocale()} }}</h1>
-                                <p><span class="text-primary">Urgent svc is an 24/7 emergency company,</span> offering highly qualified services</p>
+                                <!-- <p><span class="text-primary">Urgent svc is an 24/7 emergency company,</span> offering highly qualified services</p> -->
                                 <div class="my-4">
                                     <p>{{ $service->{'description_'.app()->getLocale()} }}</p>
                                     @if(isset($service->items) && count($service->items) > 0)
@@ -41,7 +41,8 @@
                                         @endforeach
                                     @endif
                                 </div>
-                                <p class="text-primary">Do you need an urgent service ?</p>
+                                <!-- <p class="text-primary">Do you need an urgent service ?</p> -->
+                                <a href="" class="contacts-btn" style="margin-top: 24px;">Call Now for {{ $service->{'title_'.app()->getLocale()} }}</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 pl-lg-5">

@@ -1806,8 +1806,6 @@ a:hover {
 .navbar-area .nav-container .navbar-collapse .navbar-nav li.menu-item-has-children .sub-menu .menu-item-has-children:hover > .sub-menu li:hover:before {
   color: #fff;
 }
-  top: 0;
-}
 .navbar-area.navbar-area-3 {
   top: 130px;
 }
@@ -5242,16 +5240,8 @@ footer .logo img {
   z-index: 3;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
   justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.footer-top-block p {
-  color: #0069AB;
-  font-size: 32px;
-  font-weight: 700;
-  margin: 0px;
 }
 
 .footer-top-block a {
@@ -5399,6 +5389,7 @@ footer .logo img {
   column-gap: 60px;
   margin-top: 48px;
   position: relative;
+  margin-bottom: 100px;
 }
 
 .testimonials-item {
@@ -5412,6 +5403,7 @@ footer .logo img {
   display: flex;
   align-items: center;
   gap: 24px;
+  flex: 1;
 }
 
 .testimonials-item img {
@@ -5532,6 +5524,23 @@ footer .logo img {
   position: relative;
 }
 
+.footer-top-block-title {
+  color: #0069AB;
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.footer-top-block-desc {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.footer-top-block > div {
+  flex: 1;
+}
+
 @media only screen and (max-width: 1200px) {
   .single-details h1 {
     font-size: 32px;
@@ -5626,6 +5635,7 @@ footer .logo img {
   }
   .footer-top-block {
     padding: 24px;
+    flex-direction: column;
   }
   .footer-top-block p {
     font-size: 22px;

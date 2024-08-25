@@ -6,7 +6,7 @@
                 @if(app()->getLocale() == 'fr')
                     <h1>Un <span class="text-gradient">message</span></h1>
                 @else
-                    <h1>Interested ?<br> <span class="text-gradient">Let's talk!</span></h1>
+                    <h1>Need <span class="text-gradient">Assistance?</span></h1>
                 @endif
                 <p class="contact-form-description">{{ translating('contact-us-message-description') }}</p>
             </div>
@@ -27,7 +27,7 @@
                             <div class="validation"></div>
                         </div>
                         <div class="form-group col-md-12">
-                            <input type="text" class="form-control" form="messageForm" name="subject" required placeholder="{{ translating('subject') }}" />
+                            <input type="text" class="form-control" form="messageForm" name="service" required placeholder="{{ translating('service') }}" />
                             <div class="validation"></div>
                         </div>
                         <div class="form-group col-12">
