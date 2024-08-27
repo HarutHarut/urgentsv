@@ -10,11 +10,11 @@
 
     @include('components.home.services-tab')
 
-    @include('components.home.years-of-experiance')
+    {{-- @include('components.home.years-of-experiance') --}}
 
     @include('components.home.testimonials')
 
-    @include('components.home.map')
+    {{-- @include('components.home.map') --}}
 
     {{-- @include('components.home.about-us') --}}
 

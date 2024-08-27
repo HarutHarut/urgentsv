@@ -12,86 +12,86 @@ Route::group([
     Route::get('/', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
 
     Route::get( '/home', [App\Http\Controllers\IndexController::class, 'index'])->name('home');
-    
+
     Route::get('/contacts', [App\Http\Controllers\ContactsController::class, 'index'])->name('contacts');
-    
+
     Route::get('/about-us', [App\Http\Controllers\AboutUsController::class, 'index'])->name('about-us');
-    
+
     Route::get('/services/{url?}', [App\Http\Controllers\ServicesController::class, 'index'])->name('services');
-    
+
     Route::get('/error', [App\Http\Controllers\ErrorController::class, 'index'])->name('error');
-        
+
     Route::get('/account', [App\Http\Controllers\AccountController::class, 'index'])->name('account');
     Route::get('/payment', [App\Http\Controllers\PaymentController::class, 'index'])->name('payment');
-    
+
     Route::get('/terms-and-conditions', [App\Http\Controllers\TermsAndConditionsController::class, 'index'])->name('terms-and-conditions');
     Route::get('/privacy-policy', [App\Http\Controllers\PolitiqueConfidenaliteController::class, 'index'])->name('politique-confidenalite');
     Route::get('/cookie-policy', [App\Http\Controllers\CookiePolicyController::class, 'index'])->name('cookie-policy');
     Route::get('/code-de-conduite', [App\Http\Controllers\CodeDeConduiteController::class, 'index'])->name('code-de-conduite');
 
     Route::get('/cart', [App\Http\Controllers\CartController::class, 'index'])->name('cart');
-    
+
     Route::get('/checkout', [App\Http\Controllers\CheckoutController::class, 'index'])->name('checkout');
-    
+
     Route::post('/checkout/action', [App\Http\Controllers\CheckoutController::class, 'action'])->name('checkout-action');
-    
+
     Route::get('/checkout/success', [App\Http\Controllers\CheckoutController::class, 'success'])->name('checkout-success');
-    
+
     Route::get('/checkout/error', [App\Http\Controllers\CheckoutController::class, 'error'])->name('checkout-error');
-    
+
     Route::get('/terms-and-conditions', [App\Http\Controllers\TermsAndConditionsController::class, 'index'])->name('terms-and-conditions');
-    
+
     Route::match(['get', 'post'], '/search', [App\Http\Controllers\ServicesController::class, 'search'])->name('search');
 
     Route::post('/send-message', [App\Http\Controllers\SendController::class, 'message'])->name('send-message');
 
     Route::post('/subscribe', [App\Http\Controllers\SendController::class, 'subscribe'])->name('send-subscribe');
-    
+
     Route::post('/write-review/{id}', [App\Http\Controllers\SendController::class, 'review'])->name('send-review');
-    
+
     Route::post('/change-address', [App\Http\Controllers\SendController::class, 'change_address'])->name('change-address');
 
     Route::get('/login', [App\Http\Controllers\Auth\LoginController::class, 'showLoginForm'])->name('login');
-    
+
     Route::get('/log-out', [App\Http\Controllers\AccountController::class, 'log_out'])->name('log-out');
-    
+
     Route::get('/verify/{email}', [App\Http\Controllers\AccountController::class, 'verify'])->name('verify');
-    
+
     Route::post('/resend', [App\Http\Controllers\AccountController::class, 'resend'])->name('resend');
-    
+
     Route::post('/forget-password', [App\Http\Controllers\Auth\LoginController::class, 'forget_password'])->name('forget-password');
     Route::get('/card-verify', [App\Http\Controllers\AccountController::class, 'card_verify'])->name('card-verify');
-    
+
     Route::get('/reset-password/{email}', [App\Http\Controllers\Auth\LoginController::class, 'reset_password'])->name('reset-password');
-    
+
     Route::post('/reset-password-update', [App\Http\Controllers\Auth\LoginController::class, 'reset_password_update'])->name('reset-password-update');
-    
+
     Route::post('/account/change', [App\Http\Controllers\AccountController::class, 'update'])->name('account-change');
-    
+
     Route::post('/account/pay', [App\Http\Controllers\AccountController::class, 'payOrder'])->name('account-pay');
 
     Route::post('/account/set-status', [App\Http\Controllers\AccountController::class, 'set_status'])->name('set-status');
-    
+
     Route::any('/register', [App\Http\Controllers\Auth\RegisterController::class])->name('register');
 
     Route::post('/change-address', [App\Http\Controllers\SendController::class, 'change_address'])->name('change-address');
-    
+
     Route::post('/change-account-data', [App\Http\Controllers\AccountController::class, 'change_account_data'])->name('change-account-data');
-    
+
     Route::post('/change-account-secondary-data', [App\Http\Controllers\AccountController::class, 'change_account_secondary_data'])->name('change-account-secondary-data');
 
     Route::post('/change-account-secondary-data-docs', [App\Http\Controllers\AccountController::class, 'change_account_secondary_data_docs'])->name('change-account-secondary-data-docs');
-    
+
     Route::post('/change-image', [App\Http\Controllers\AccountController::class, 'change_image'])->name('change-image');
-    
+
     Route::post('/confirm-terms', [App\Http\Controllers\AccountController::class, 'confirm_terms'])->name('confirm-terms');
-    
+
     Route::get('/pdf/{id}', [App\Http\Controllers\AccountController::class, 'pdf'])->name('download-pdf');
-    
+
     Route::get('/download-data/{id}/{file}', [App\Http\Controllers\AccountController::class, 'download_data'])->name('download-data');
-    
+
     Route::post('/update-description/{id}', [App\Http\Controllers\AccountController::class, 'update_description'])->name('update-description');
-    
+
     Auth::routes();
 
     // Home
@@ -345,7 +345,7 @@ Route::group([
     Route::post('/admin/locations/update/{id}', [App\Http\Controllers\Admin\LocationsController::class, 'update'])->name('locations-admin-update');
     Route::post('/admin/locations/store', [App\Http\Controllers\Admin\LocationsController::class, 'store'])->name('locations-admin-store');
     Route::get('/admin/locations/destroy/{id}', [App\Http\Controllers\Admin\LocationsController::class, 'destroy'])->name('locations-admin-destroy');
-    
+
     // Currrencies
     Route::get('/admin/currencies', [App\Http\Controllers\Admin\CurrenciesController::class, 'index'])->name('currencies-admin-index');
     Route::get('/admin/currencies/show/{id}', [App\Http\Controllers\Admin\CurrenciesController::class, 'show'])->name('currencies-admin-show');

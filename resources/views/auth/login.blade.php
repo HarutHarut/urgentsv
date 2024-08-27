@@ -20,7 +20,7 @@
     <div class="auth-pages-content">
         <div class="container py-5">
             <div class="row justify-content-center">
-                <div class="col-md-6">
+                <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12">
                     <h1 class="text-center text-white mb-4 auth-form-title">Log In</h1>
                     <div class="auth-form-block">
                         <form method="POST" action="{{ route('login', ['locale' => app()->getLocale()]) }}">
@@ -78,7 +78,7 @@
                         </form>
                     </div>
                     <div class="row align-items-center auth-page-bottom-block">
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <a href='/'>
                                 <svg width="50" height="16" viewBox="0 0 50 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M0.292454 7.20207C-0.0980682 7.59259 -0.0980683 8.22576 0.292454 8.61628L6.65641 14.9802C7.04694 15.3708 7.6801 15.3708 8.07063 14.9802C8.46115 14.5897 8.46115 13.9566 8.07063 13.566L2.41378 7.90918L8.07063 2.25232C8.46116 1.8618 8.46116 1.22863 8.07063 0.838109C7.6801 0.447584 7.04694 0.447584 6.65641 0.838108L0.292454 7.20207ZM50.0098 6.90918L0.999561 6.90918L0.999561 8.90918L50.0098 8.90918L50.0098 6.90918Z" fill="white"/>
@@ -86,7 +86,7 @@
                                 <span class="ml-2 text-white">back to main page<span>
                             </a>
                         </div>
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
                             <a href="/{{app()->getLocale()}}/register" class="auth-page-bottom-btn">Sign Up</a>
                         </div>
                     </div>
