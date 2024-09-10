@@ -59,5 +59,10 @@
             <p class="count-block-text">Business Cooperations</p>
         </div>
     </div>
-    <a href="/{{app()->getLocale()}}/contacts" class="contacts-btn" style="margin: 0px auto;">Be Our Next Satisfied Customer – Call Now!</a>
+    <!-- <a href="/{{app()->getLocale()}}/contacts" class="contacts-btn" style="margin: 0px auto;">Be Our Next Satisfied Customer – Call Now!</a> -->
+    <div class="urgency-block">
+        <h3><span>Need Help Fast?</span> We are here 24/7!</h3>
+        <p>When an emergency strikes, you need a team that responds quickly. Our experts are available around the clock to solve your problems.</p>
+        <a href="tel:0525680425">Call Now for Immediate Service</a>
+    </div>
 </div>

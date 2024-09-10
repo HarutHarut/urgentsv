@@ -607,4 +607,21 @@
         });
     });
 
+    $('.special-offer-banner-bottom-block').click(function() {
+        $('.special-offer-banner').fadeOut();
+    });
+
+    $(window).on('scroll', function() {
+        var scrollTop = $(window).scrollTop();
+        var documentHeight = $(document).height();
+        var windowHeight = $(window).height();
+        var scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+
+        if (scrollPercent >= 30) {
+            $('.special-offer-banner').fadeIn();
+        } else {
+            $('.special-offer-banner').fadeOut();
+        }
+    });
+
 })(jQuery);
