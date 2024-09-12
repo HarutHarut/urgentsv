@@ -607,8 +607,11 @@
         });
     });
 
+    let specialOfferBanner = true
+
     $('.special-offer-banner-bottom-block').click(function() {
         $('.special-offer-banner').fadeOut();
+        specialOfferBanner = false;
     });
 
     $(window).on('scroll', function() {
@@ -617,7 +620,7 @@
         var windowHeight = $(window).height();
         var scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
 
-        if (scrollPercent >= 30) {
+        if (scrollPercent >= 30 && specialOfferBanner) {
             $('.special-offer-banner').fadeIn();
         } else {
             $('.special-offer-banner').fadeOut();
