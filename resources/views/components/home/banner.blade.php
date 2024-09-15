@@ -45,5 +45,5 @@
             </svg>
         </a>
     </div>
-    <img src="/assets/img/contact/contact-info-block-bg.png" class="call-block-bg-img" alt="image">
+    <img src="{{ $image_path }}/contact/contact-info-block-bg.png" class="call-block-bg-img" alt="image">
 </div>
