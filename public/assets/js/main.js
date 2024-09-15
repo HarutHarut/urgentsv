@@ -607,24 +607,24 @@
         });
     });
 
-    let specialOfferBanner = true
+    // let specialOfferBanner = true
 
-    $('.special-offer-banner-bottom-block').click(function() {
-        $('.special-offer-banner').fadeOut();
-        specialOfferBanner = false;
-    });
+    // $('.special-offer-banner-bottom-block').click(function() {
+    //     $('.special-offer-banner').fadeOut();
+    //     specialOfferBanner = false;
+    // });
 
-    $(window).on('scroll', function() {
-        var scrollTop = $(window).scrollTop();
-        var documentHeight = $(document).height();
-        var windowHeight = $(window).height();
-        var scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+    // $(window).on('scroll', function() {
+    //     var scrollTop = $(window).scrollTop();
+    //     var documentHeight = $(document).height();
+    //     var windowHeight = $(window).height();
+    //     var scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
 
-        if (scrollPercent >= 30 && specialOfferBanner) {
-            $('.special-offer-banner').fadeIn();
-        } else {
-            $('.special-offer-banner').fadeOut();
-        }
-    });
+    //     if (scrollPercent >= 30 && specialOfferBanner) {
+    //         $('.special-offer-banner').fadeIn();
+    //     } else {
+    //         $('.special-offer-banner').fadeOut();
+    //     }
+    // });
 
 })(jQuery);

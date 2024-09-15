@@ -141,7 +141,7 @@
         </svg>
     </a>
 
-    <div class="special-offer-banner">
+    <!-- <div class="special-offer-banner">
         <div class="overlay"></div>
         <div class="special-offer-banner-wrapper">
             <div  class="special-offer-banner-top-block">
@@ -166,6 +166,6 @@
                 <img src="{{ $image_path }}/special-offer-bottom-block.png" />
             </div>
         </div>
-    </div>
+    </div> -->
 </footer>
 <!-- footer area end -->
