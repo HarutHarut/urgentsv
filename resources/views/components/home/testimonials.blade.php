@@ -47,15 +47,15 @@
     </div>
     <div class="d-flex justify-content-center text-center count-block-grid flex-wrap">
         <div class="count-block">
-            <p class="text-gradient count-block-title">500+</p>
+            <p class="text-gradient count-block-title">3100+</p>
             <p class="count-block-text">Happy Customers</p>
         </div>
         <div class="count-block">
-            <p class="text-gradient count-block-title">200+</p>
+            <p class="text-gradient count-block-title">220+</p>
             <p class="count-block-text">Emergency Repairs Completed</p>
         </div>
         <div class="count-block">
-            <p class="text-gradient count-block-title">50+</p>
+            <p class="text-gradient count-block-title">40+</p>
             <p class="count-block-text">Business Cooperations</p>
         </div>
     </div>
@@ -63,6 +63,6 @@
     <div class="urgency-block">
         <h3><span>Need Help Fast?</span> We are here 24/7!</h3>
         <p>When an emergency strikes, you need a team that responds quickly. Our experts are available around the clock to solve your problems.</p>
-        <a href="tel:0525680425">Call Now for Immediate Service</a>
+        <a href="tel:0525680425">Call Now for Immediate Services 0525680425</a>
     </div>
 </div>

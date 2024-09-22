@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- app favicon -->
     <link rel="shortcut icon" href="{{asset('admin-assets/img/favicon.ico') }}">
+    <link rel="icon" type="image/x-icon" href="{{asset('admin-assets/img/favicon.ico') }}">
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <!-- plugin stylesheet -->
