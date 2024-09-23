@@ -121,7 +121,7 @@ class Index
                 'footer_links' => $footer_links,
                 'services' => $services,
                 'user_number' => $user_number,
-               'image_path' => '/public/assets/img',
+                'image_path' => '/public/assets/img',
                 // 'image_path' => '/assets/img',
                 'private_email' => 'info@intervention-urgence24-7.com',
             );

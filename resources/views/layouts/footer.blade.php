@@ -78,6 +78,9 @@
                     @endif
                 </div>
             </div>
+            <div class="col-xl-4 col-lg-5 col-sm-6 text-sm-right">
+                <img src="{{ $image_path }}/map.png" class="img-fluid" alt="map" />
+            </div>
             <!-- <div class="col-xl-4 col-lg-5 col-sm-6">
                 <div class="footer-widget widget widget_contact">
                     <h4 class="widget-title">{{ translating('contact-us') }}</h4>
