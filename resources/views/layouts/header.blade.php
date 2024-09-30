@@ -72,11 +72,35 @@
                         <a class="d-inline-block ml-2 text-primary" href="tel: {{ $user_number }}"> {{ $user_number }}</a>
                     <li> -->
 
-                    <li class="header-language">
+                    <li class="header-language dropdown">
+                        <button type="buttton" id="languageDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            @if(app()->getLocale() == 'en')
+                                <img src="{{ $image_path }}/en-flag.png" />
+                            @else
+                                <img src="{{ $image_path }}/fr-flag.png" />
+                            @endif
+                            <svg width="10" height="5" viewBox="0 0 10 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5 5L0 0H10L5 5Z" fill="#0084D4"/>
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="languageDropdown">
+                            @if(app()->getLocale() == 'en')
+                                <a href="{{ route(\Request::route()->getName(), ['locale' => 'fr']) }}">
+                                    <img src="{{ $image_path }}/fr-flag.png" />
+                                </a>
+                            @else 
+                                <a href="{{ route(\Request::route()->getName(), ['locale' => 'en']) }}">
+                                    <img src="{{ $image_path }}/en-flag.png" />
+                                </a>
+                            @endif
+                        </div>
+                    </li>
+
+                    <!-- <li class="header-language">
                         <a href="{{ route(\Request::route()->getName(), ['locale' => 'en']) }}" class="@if(app()->getLocale() == 'en') text-primary @endif">{{ translating('eng') }}</a>
                         <span>|</span>
                         <a href="{{ route(\Request::route()->getName(), ['locale' => 'fr']) }}" class="@if(app()->getLocale() == 'fr') text-primary @endif">{{ translating('fr') }}</a>
-                    </li>
+                    </li> -->
 
                     @auth
 	                    <li class="current-menu-item">

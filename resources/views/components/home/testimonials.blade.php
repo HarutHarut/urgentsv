@@ -6,18 +6,12 @@
     <div class="testimonials-grid">
         <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-left" alt="testimonials" />
         <div class="testimonials-item">
-            <img src="{{ $image_path }}/testimonials/testimonials-1.png" class="responsive" alt="Sophie M." />
-            <div>
-                <p class="testimonials-item-desc">“After being locked out of my house late at night, I was so relieved by the fast response. The locksmith was efficient and friendly, and the new lock they installed works perfectly. Excellent service!”</p>
-                <p class="testimonials-author">- Sophie M.</p>
-            </div>
+            <p class="testimonials-item-desc">“After being locked out of my house late at night, I was so relieved by the fast response. The locksmith was efficient and friendly, and the new lock they installed works perfectly. Excellent service!”</p>
+            <p class="testimonials-author">- Sophie M.</p>
         </div>
         <div class="testimonials-item">
-            <img src="{{ $image_path }}/testimonials/testimonials-2.png" class="responsive" alt="Marc L." />
-            <div>
-                <p class="testimonials-item-desc">“Managing chronic conditions like diabetes requires a lot of vigilance, but the medicine refill system has simplified my life.”</p>
-                <p class="testimonials-author">- Marc L.</p>
-            </div>
+            <p class="testimonials-item-desc">“Managing chronic conditions like diabetes requires a lot of vigilance, but the medicine refill system has simplified my life.”</p>
+            <p class="testimonials-author">- Marc L.</p>
         </div>
         <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-right" alt="testimonials" />
     </div>
@@ -25,18 +19,12 @@
         <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-left" alt="testimonials" />
 
         <div class="testimonials-item">
-            <img src="{{ $image_path }}/testimonials/testimonials-1.png" class="responsive" alt="Claire D." />
-            <div>
-                <p class="testimonials-item-desc">“The electrician from Urgent SVC was fantastic! He fixed my faulty wiring quickly and even gave me some tips on preventing future issues. Great service at a reasonable price.”</p>
-                <p class="testimonials-author">- Claire D.</p>
-            </div>
+            <p class="testimonials-item-desc">“The electrician from Urgent SVC was fantastic! He fixed my faulty wiring quickly and even gave me some tips on preventing future issues. Great service at a reasonable price.”</p>
+            <p class="testimonials-author">- Claire D.</p>
         </div>
         <div class="testimonials-item">
-            <img src="{{ $image_path }}/testimonials/testimonials-2.png" class="responsive" alt="Jean-Paul R." />
-            <div>
-                <p class="testimonials-item-desc">“I had a major leak in my kitchen, and the plumber arrived promptly. He was very knowledgeable and fixed the problem without any hassle. I’m extremely satisfied with the service and will definitely call them again if needed.”</p>
-                <p class="testimonials-author">- Jean-Paul R.</p>
-            </div>
+            <p class="testimonials-item-desc">“I had a major leak in my kitchen, and the plumber arrived promptly. He was very knowledgeable and fixed the problem without any hassle. I’m extremely satisfied with the service and will definitely call them again if needed.”</p>
+            <p class="testimonials-author">- Jean-Paul R.</p>
         </div>
         <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-right" alt="testimonials" />
     </div>

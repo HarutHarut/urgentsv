@@ -5403,8 +5403,9 @@ footer .logo img {
   border-radius: 20px;
   padding: 28px 36px;
   display: flex;
-  align-items: center;
-  gap: 24px;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
   flex: 1;
 }
 
@@ -5821,6 +5822,26 @@ footer .logo img {
   justify-content: end;
   flex-direction: column;
   right: 0px;
+}
+
+.header-language button {
+  background-color: transparent;
+  border: none;
+}
+
+.header-language button svg {
+  margin-left: 6px;
+}
+
+.header-language .dropdown-menu {
+  background-color: transparent;
+  border: none;
+  padding: 0px 6px;
+  margin-top: -10px;
+}
+
+.header-language .dropdown-toggle:after {
+  border-top: 0.3em solid #0084D4;
 }
 
 @media only screen and (max-width: 1200px) {
