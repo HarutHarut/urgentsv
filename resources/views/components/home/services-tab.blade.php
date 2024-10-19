@@ -2,7 +2,7 @@
     <div class="why-choose-area-menu-area pd-top-80 pd-bottom-50 mt-3">
         <div class="container">
             <div class="row justify-content-center my-lg-5">
-                <div class="col-lg-8">
+                <div class="col-lg-6">
                     <div class="section-title text-center mb-4">
 {{--                        <h2 class="title">{{ translating('services-title') }}</h2>--}}
                         @if(app()->getLocale() == 'fr')
@@ -10,7 +10,7 @@
                         @else
                             <h2 class="title">Our <span class="text-gradient">Expert</span> Services</h2>
                         @endif
-                        <p>{{ translating('services-description') }}</p>
+                        <p>Explore our wide range of home services tailored to meet your needs. From electrical repairs to plumbing, we’ve got you covered.</p>
                     </div>
                 </div>
             </div>
@@ -35,7 +35,7 @@
                             </div>
                             <h6>{{ $title }}</h6>
                             <p>{{ $service->{'description_'.app()->getLocale()} }}</p>
-                            <a href="/{{app()->getLocale()}}/services/{{$service->url}}" class="learn-more-btn">Call Now for {{ $title }}</a>
+                            <a href="/{{app()->getLocale()}}/services/{{$service->url}}" class="learn-more-btn">Book a service</a>
                         </div>
                     </div>
                 @endforeach

@@ -269,8 +269,8 @@ class LoginController extends Controller
             'services' => $services,
             'seo' => $seo,
             'user_number' => $user_number,
-//            'image_path' => '/public/assets/img',
-            'image_path' => '/assets/img',
+           'image_path' => '/public/assets/img',
+            // 'image_path' => '/assets/img',
             'private_email' => 'manch.asatryan2020@gmail.com',
         );
 

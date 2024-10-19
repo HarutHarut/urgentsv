@@ -127,8 +127,8 @@ class RegisterController extends Controller
             'services' => $services,
             'user_number' => $user_number,
             'seo' => $seo,
-//            'image_path' => '/public/assets/img',
-            'image_path' => '/assets/img',
+           'image_path' => '/public/assets/img',
+            // 'image_path' => '/assets/img',
             'private_email' => 'info@intervention-urgence24-7@gmail.com',
         );
 

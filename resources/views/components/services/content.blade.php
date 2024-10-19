@@ -42,7 +42,7 @@
                                     @endif
                                 </div>
                                 <!-- <p class="text-primary">Do you need an urgent service ?</p> -->
-                                <a href="" class="contacts-btn" style="margin-top: 24px;">Call Now for {{ $service->{'title_'.app()->getLocale()} }}</a>
+                                <a href="" class="contacts-btn" style="margin-top: 24px;">Book a service</a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 pl-lg-5">

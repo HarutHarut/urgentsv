@@ -607,4 +607,33 @@
         });
     });
 
+    // let specialOfferBanner = true
+
+    // $('.special-offer-banner-bottom-block').click(function() {
+    //     $('.special-offer-banner').fadeOut();
+    //     specialOfferBanner = false;
+    // });
+
+    // $(window).on('scroll', function() {
+    //     var scrollTop = $(window).scrollTop();
+    //     var documentHeight = $(document).height();
+    //     var windowHeight = $(window).height();
+    //     var scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+
+    //     if (scrollPercent >= 30 && specialOfferBanner) {
+    //         $('.special-offer-banner').fadeIn();
+    //     } else {
+    //         $('.special-offer-banner').fadeOut();
+    //     }
+    // });
+    $('.testimonials-grid').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow'),
+    });
+
 })(jQuery);

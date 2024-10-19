@@ -121,8 +121,8 @@ class Index
                 'footer_links' => $footer_links,
                 'services' => $services,
                 'user_number' => $user_number,
-//                'image_path' => '/public/assets/img',
-                'image_path' => '/assets/img',
+                'image_path' => '/public/assets/img',
+                // 'image_path' => '/assets/img',
                 'private_email' => 'info@intervention-urgence24-7.com',
             );
 
@@ -189,8 +189,11 @@ class Index
                 // Get all cities count
                 $cities_count = Cities::count();
 
+                $site_data = SiteData::first();
+
                 // Make data
                 $data = array(
+                    'site_data' => $site_data,
                     'unreaded_messages' => $unreaded_messages,
                     'unreaded_orders' => $unreaded_orders,
                     'orders_count' => $orders_count,
