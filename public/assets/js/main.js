@@ -626,5 +626,14 @@
     //         $('.special-offer-banner').fadeOut();
     //     }
     // });
+    $('.testimonials-grid').slick({
+        dots: false,
+        arrows: true,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        prevArrow: $('.prev-arrow'),
+        nextArrow: $('.next-arrow'),
+    });
 
 })(jQuery);
