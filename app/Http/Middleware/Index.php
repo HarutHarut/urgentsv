@@ -189,8 +189,11 @@ class Index
                 // Get all cities count
                 $cities_count = Cities::count();
 
+                $site_data = SiteData::first();
+
                 // Make data
                 $data = array(
+                    'site_data' => $site_data,
                     'unreaded_messages' => $unreaded_messages,
                     'unreaded_orders' => $unreaded_orders,
                     'orders_count' => $orders_count,
