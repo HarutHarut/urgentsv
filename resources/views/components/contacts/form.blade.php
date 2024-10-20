@@ -7,9 +7,10 @@
                     @if(app()->getLocale() == 'fr')
                         <h1>Un <span class="text-gradient">message</span></h1>
                     @else
-                        <h1>Interested? <span class="text-gradient d-block">Let's Talk!</span></h1>
+                        <h1>Need Assistance?</h1>
                     @endif
-                    <p class="contact-form-description">{{ translating('contact-us-message-description') }}</p>
+                    <!-- <p class="contact-form-description">{{ translating('contact-us-message-description') }}</p> -->
+                    <p class="contact-form-description">We’re here to help 24/7. Call us for immediate support, or email for quick responses</p>
                 </div>
                 <div class="form contact-form">
                     <form success="{{ translating('success-message') }}" error="{{ translating('error-message') }}" action="{{ route('send-message', ['locale' => app()->getLocale()]) }}" id="messageForm" method="post" class="contactForm">
@@ -27,10 +28,10 @@
                                 <input type="text" class="form-control" form="messageForm" name="phone" required placeholder="{{ translating('phone') }}" />
                                 <div class="validation"></div>
                             </div>
-                            <!-- <div class="form-group col-md-12">
+                            <div class="form-group col-md-12">
                                 <input type="text" class="form-control" form="messageForm" name="service" required placeholder="{{ translating('service') }}" />
                                 <div class="validation"></div>
-                            </div> -->
+                            </div>
                             <div class="form-group col-12 mt-3">
                                 <textarea class="form-control" name="message" form="messageForm" rows="3" required placeholder="{{ translating('message') }}"></textarea>
                             </div>

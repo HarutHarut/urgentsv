@@ -19,7 +19,7 @@
             <div class="testimonial-block">
                 <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-left" alt="testimonials" />
                 <div class="testimonials-item">
-                    <p class="testimonials-item-desc">“After being locked out of my house late at night, I was so relieved by the fast response. The locksmith was efficient and friendly, and the new lock they installed works perfectly. Excellent service!”</p>
+                    <p class="testimonials-item-desc">“I called for a boiler repair, and they arrived within an hour! The technician was professional, explained everything clearly, and had my boiler up and running in no time. Highly recommended!”</p>
                     <p class="testimonials-author">- Sophie M.</p>
                 </div>
                 <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-right" alt="testimonials" />
@@ -27,7 +27,7 @@
             <div class="testimonial-block">
                 <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-left" alt="testimonials" />
                 <div class="testimonials-item">
-                    <p class="testimonials-item-desc">“Managing chronic conditions like diabetes requires a lot of vigilance, but the medicine refill system has simplified my life.”</p>
+                    <p class="testimonials-item-desc">“After being locked out of my house late at night, I was so relieved by the fast response. The locksmith was efficient and friendly, and the new lock they installed works perfectly. Excellent service!”</p>
                     <p class="testimonials-author">- Marc L.</p>
                 </div>
                 <img src="{{ $image_path }}/testimonials/testimonials-bg-img.png" class="testimonials-bg-right" alt="testimonials" />
