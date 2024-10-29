@@ -10,11 +10,11 @@ use Illuminate\Http\Request;
 class ServicesController extends Controller
 {
     // Admin Validation
-    public function __construct() 
+    public function __construct()
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the.
      *
@@ -118,19 +118,19 @@ class ServicesController extends Controller
         if($request->has('img')){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('img')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('img')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_2'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->img->move(public_path('assets/img/service/img'), $fileNameToStore);
-            
+
             // Push data
             $item->img = $fileNameToStore;
         }else{
@@ -141,19 +141,19 @@ class ServicesController extends Controller
         if($request->has('icon')){
             // Get filename with extenstion
             $filenameWithExt_icon = $request -> file('icon')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename_icon = pathinfo($filenameWithExt_icon, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion_icon = $request->file('icon')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore_icon = 'Depannage_1'.time().'.'.$extenstion_icon;
-            
+
             // Upload image
             $request->icon->move(public_path('assets/img/service'), $fileNameToStore_icon);
-            
+
             // Push data
             $item->icon = $fileNameToStore_icon;
         }else{
@@ -183,7 +183,7 @@ class ServicesController extends Controller
 
         // Get item
         $item = Services::findOrFail($id);
-        
+
         // Push data
         $data['item'] = $item;
         $data['page_name'] = $page_name;
@@ -232,19 +232,19 @@ class ServicesController extends Controller
         if($request->has('img')){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('img')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('img')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_'.time().'2.'.$extenstion;
-            
+
             // Upload image
             $request->img->move(public_path('assets/img/service/img'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = Services::findOrFail($id);
 
@@ -262,19 +262,19 @@ class ServicesController extends Controller
         if($request->has('icon')){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('icon')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('icon')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_'.time().'1.'.$extenstion;
-            
+
             // Upload image
             $request->icon->move(public_path('assets/img/service'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = Services::findOrFail($id);
 
@@ -287,7 +287,7 @@ class ServicesController extends Controller
             // Push data
             $item['icon'] = $fileNameToStore;
         }
-        
+
         // Make data
         $item['title_en'] = $request->title_en;
         $item['title_ru'] = $request->title_ru;
@@ -330,7 +330,7 @@ class ServicesController extends Controller
             // Unlink old image
             unlink(public_path('img/services/'.$service->img));
         }
-        
+
         // Delete from itmes
         Services::findOrFail($id)->delete();
 

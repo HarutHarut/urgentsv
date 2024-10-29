@@ -6,7 +6,7 @@
                 <div class="col-lg-8">
                     <div class="section-title text-center mb-4">
                         <h1 class="title">{{ $service->{'title_'.app()->getLocale()} }}</h1>
-                    </div>                    
+                    </div>
                 </div>
             </div> --}}
             <!-- <ul class="row nav nav-pills klm-work-tab no-gutters">
@@ -28,7 +28,7 @@
                                 <h1 class="mb-4">{{ $service->{'title_'.app()->getLocale()} }}</h1>
                                 <!-- <p><span class="text-primary">Urgent svc is an 24/7 emergency company,</span> offering highly qualified services</p> -->
                                 <div class="my-4">
-                                    <p>{{ $service->{'description_'.app()->getLocale()} }}</p>
+                                    <p>{!! $service->{'description_'.app()->getLocale()} !!}</p>
                                     @if(isset($service->items) && count($service->items) > 0)
                                         @foreach($service->items as $item)
                                             <div class="list">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 
             @include('components.contacts.info')
         </div>

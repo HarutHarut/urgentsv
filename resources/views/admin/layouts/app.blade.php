@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="{{ asset('admin-assets/css/vendors.css') }}" />
     <!-- app style -->
     <link rel="stylesheet" href="{{ asset('admin-assets/css/style.css') }}" />
+
+    <link rel="stylesheet" href="https://cdn.ckeditor.com/ckeditor5/43.3.0/ckeditor5.css">
 </head>
 
 <body>
@@ -23,7 +25,7 @@
         <!-- begin app-wrap -->
         <div class="app-wrap">
             @include('admin.layouts.loader')
-            
+
             @include('admin.layouts.header')
 
             <!-- begin app-container -->
@@ -31,7 +33,7 @@
                 <!-- begin app-nabar -->
                     @include('admin.layouts.sidebar')
                 <!-- end app-navbar -->
-                
+
                 <!-- begin app-main -->
                     @include('admin.layouts.content-header')
                         @yield('content')
@@ -39,12 +41,58 @@
                 <!-- end app-main -->
             </div>
             <!-- end app-container -->
-            
+
             @include('admin.layouts.footer')
         </div>
         <!-- end app-wrap -->
     </div>
     <!-- end app -->
+
+    <script type="importmap">
+        {
+            "imports": {
+                "ckeditor5": "https://cdn.ckeditor.com/ckeditor5/43.3.0/ckeditor5.js",
+                "ckeditor5/": "https://cdn.ckeditor.com/ckeditor5/43.3.0/"
+            }
+        }
+    </script>
+    <script type="module">
+        import {
+            ClassicEditor,
+            Essentials,
+            Paragraph,
+            Bold,
+            Italic,
+            Font
+        } from 'ckeditor5';
+
+        const ckeditorEls = document.querySelectorAll('.ckeditor5');
+
+        ckeditorEls.forEach((item) => {
+            ClassicEditor
+                .create( item, {
+                    plugins: [ Essentials, Paragraph, Bold, Italic, Font ],
+                    toolbar: [
+                        'undo', 'redo', '|', 'bold', 'italic', '|',
+                        'fontSize', 'fontFamily', 'fontColor', 'fontBackgroundColor'
+                    ]
+                } )
+                .then( editor => {
+                    window.editor = editor;
+                } )
+                .catch( error => {
+                    console.error( error );
+                } );
+        });
+    </script>
+    <!-- A friendly reminder to run on a server, remove this during the integration. -->
+    <script>
+        window.onload = function() {
+            if ( window.location.protocol === "file:" ) {
+                alert( "This sample requires an HTTP server. Please serve this file with a web server." );
+            }
+        };
+    </script>
 
     <!-- plugins -->
     <script src="/admin-assets/js/vendors.js"></script>
@@ -66,5 +114,5 @@
     <script src="/admin-assets/js/app.js"></script>
 
     <script type="text/javascript" src="http://rate.am/informer/rate/script/default.aspx?uid=UI-50107398&width=215&height=132&cb=0&bgcolor=FFFFFF&lang=am"></script>
-</body> 
+</body>
 </html>

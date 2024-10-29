@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\DB;
 class AccountController extends Controller
 {
     // Auth Validation
-    // public function __construct() 
+    // public function __construct()
     // {
     //     $this->middleware('auth');
     // }
@@ -40,7 +40,7 @@ class AccountController extends Controller
         }
 
         $docs = UserOptionsDocs::where('user_id',  Auth::user()->id)->first();
-        
+
         if($docs == NULL){
 			// Make options docs
 	        $docs = new UserOptionsDocs;
@@ -111,14 +111,14 @@ class AccountController extends Controller
     public function  change_account_data(Request $request){
         // Get data from middleware
         $data = $request->data;
-        
+
         // Validation
         $request->validate([
             'name' => 'required|max:255',
             'email' => 'required|max:255',
             'phone' => 'required|max:255',
         ]);
-        
+
         // Make data
         $user_data['name'] = $request->name;
         $user_data['email'] = $request->email;
@@ -134,7 +134,7 @@ class AccountController extends Controller
     public function  change_image(Request $request){
         // Get data from middleware
         $data = $request->data;
-        
+
         // Validation
         $request->validate([
             'img' => 'required',
@@ -144,19 +144,19 @@ class AccountController extends Controller
         if($request->has('img')){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('img')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('img')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage.fr_'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->img->move(public_path('assets/img/users'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = User::findOrFail(Auth::user()->id);
 
@@ -234,7 +234,7 @@ class AccountController extends Controller
                 $request->session()->put('error_password', 'error_password');
 
                 // Redirect Error
-                return redirect()->back()->with('error','error');    
+                return redirect()->back()->with('error','error');
             }
         }else{
             // Make Session
@@ -314,19 +314,19 @@ class AccountController extends Controller
         if($request->has('document_indentie') && $request->document_indentie != null){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('document_indentie')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('document_indentie')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_1'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->document_indentie->move(public_path('assets/img/users/pdf'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = UserOptionsDocs::where('user_id', Auth::user()->id)->first();
 
@@ -338,19 +338,19 @@ class AccountController extends Controller
         if($request->has('doc_retro') && $request->doc_retro != null){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('doc_retro')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('doc_retro')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_2'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->doc_retro->move(public_path('assets/img/users/pdf'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = UserOptionsDocs::where('user_id', Auth::user()->id)->first();
 
@@ -362,19 +362,19 @@ class AccountController extends Controller
         if($request->has('extrait_kbis_doc') && $request->extrait_kbis_doc != null){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('extrait_kbis_doc')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('extrait_kbis_doc')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_3'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->extrait_kbis_doc->move(public_path('assets/img/users/pdf'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = UserOptionsDocs::where('user_id', Auth::user()->id)->first();
 
@@ -386,19 +386,19 @@ class AccountController extends Controller
         if($request->has('n_extrais_doc') && $request->n_extrais_doc != null){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('n_extrais_doc')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('n_extrais_doc')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_4'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->n_extrais_doc->move(public_path('assets/img/users/pdf'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = UserOptionsDocs::where('user_id', Auth::user()->id)->first();
 
@@ -411,19 +411,19 @@ class AccountController extends Controller
         if($request->has('d_license_doc') && $request->d_license_doc != null){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('d_license_doc')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('d_license_doc')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_5'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->d_license_doc->move(public_path('assets/img/users/pdf'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = UserOptionsDocs::where('user_id', Auth::user()->id)->first();
 
@@ -436,19 +436,19 @@ class AccountController extends Controller
         if($request->has('d_n_license') && $request->d_n_license != null){
             // Get filename with extenstion
             $filenameWithExt = $request -> file('d_n_license')->getClientOriginalName();
-            
+
             // Get just fileNameToStore
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            
+
             // Get just ext
             $extenstion = $request->file('d_n_license')->getClientOriginalExtension();
-            
+
             // Filename to store
             $fileNameToStore = 'Depannage_6'.time().'.'.$extenstion;
-            
+
             // Upload image
             $request->d_n_license->move(public_path('assets/img/users/pdf'), $fileNameToStore);
-            
+
             // Get current category row
             $current_item = UserOptionsDocs::where('user_id', Auth::user()->id)->first();
 
@@ -485,7 +485,7 @@ class AccountController extends Controller
 
         // Loop from items
         foreach($terms_and_conditions_items as $terms_and_conditions_item){
-            // Check request has this item check 
+            // Check request has this item check
             if($request->has('confirm'.$terms_and_conditions_item->id)){
                 // Check confirm exists
                 $check_exists = ConfirmTermsAndConditions::where(['user_id' => Auth::user()->id, 'terms_id' => $terms_and_conditions_item->id])->get();
@@ -496,7 +496,7 @@ class AccountController extends Controller
                     $term_data = new ConfirmTermsAndConditions;
                     $term_data->user_id = Auth::user()->id;
                     $term_data->terms_id = $terms_and_conditions_item->id;
-                
+
                     // Save data
                     $term_data->save();
                 }
@@ -513,27 +513,27 @@ class AccountController extends Controller
     public function verify(Request $request, $locale = 'fr', $email){
         // Get data from middleware
         $data = $request->data;
-        
+
         if(!Auth::user()){
             return redirect()->route('login', ['locale' => app()->getLocale()]);
         }else{
             if(md5(Auth::user()->email) === $email){
                 // Make data
                 $update_data = array( 'confirm' => 1 );
-                
+
                 // Update
                 User::findOrFail(Auth::user()->id)->update($update_data);
-                
+
                 // Make options
                 $options = new UserOptions;
                 $options->user_id = Auth::user()->id;
                 $options->save();
-        
+
                 // Make options docs
                 $docs = new UserOptionsDocs;
                 $docs->user_id = Auth::user()->id;
                 $docs->save();
-                
+
                 // Send data to view account page
                 return redirect()->route('account', ['locale' => app()->getLocale()]);
             }else{
@@ -581,7 +581,7 @@ class AccountController extends Controller
     public function update_description(Request $request, $locale = 'fr', $id){
         // Get order
         $order = Order::findOrFail($id);
-        
+
         // Check user
         if($order->id == Auth::user()->id){
             // Error response
@@ -610,7 +610,7 @@ class AccountController extends Controller
     public function log_out(Request $request){
         // Get data
         $data = $request->data;
-        
+
         // Log Out
         Auth::logout();
 
@@ -618,7 +618,7 @@ class AccountController extends Controller
         return redirect()->route('login', ['locale' => app()->getLocale()]);
     }
 
-    
+
     public function pdf(Request $request, $locale = 'fr', $id){
         // Get data from middleware
         $data = $request->data;
@@ -631,7 +631,7 @@ class AccountController extends Controller
     }
 
     public function download_data(Request $request, $locale = 'fr', $id, $file){
-        
+
         // Get data from middleware
         $data = $request->data;
 
