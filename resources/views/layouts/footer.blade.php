@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
                 <div class="footer-widget widget">
-                    <a class="logo" href="{{ route('home', ['locale' => app()->getLocale()]) }}"><img src="{{ $image_path }}/footer-logo.png" alt="{{ $site_data->{'title_'.app()->getLocale()} }}"></a>
+                    <a class="logo" href="{{ route('home', ['locale' => app()->getLocale()]) }}"><img src="{{ $image_path }}/{{ $site_data->logo }}" alt="{{ $site_data->{'title_'.app()->getLocale()} }}"></a>
                     <p class="pr-5">Your trusted partner in emergency situations.</p>
                     <a href="tel:0525680425" class="text-primary">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px; width: 18px;">

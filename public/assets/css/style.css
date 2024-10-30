@@ -4427,8 +4427,8 @@ a:hover {
   margin-bottom: 0;
 }
 footer .logo img {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
 }
 .footer-top h4 {
   padding: 16px 0;
@@ -4936,7 +4936,6 @@ button:hover, .hov-pointer{
   width: 100%;
   margin: 0px auto;
   align-items: stretch;
-  margin-bottom: 120px;
 }
 
 .services-grid .service-block:first-child {
@@ -5202,10 +5201,10 @@ button:hover, .hov-pointer{
   background: #F2FAFF;
 }
 
-footer .logo img {
+/* footer .logo img {
   width: auto;
   height: auto;
-}
+} */
 
 .footer-widget p {
   color: #6D6D6D;
@@ -5392,7 +5391,7 @@ footer .logo img {
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  left: 82px;
+  left: 48px;
   z-index: 3;
   width: 45px;
   margin-top: 12px;
@@ -5404,7 +5403,7 @@ footer .logo img {
   transform: translateY(-50%);
   background: transparent;
   border: none;
-  right: 82px;
+  right: 48px;
   z-index: 3;
   margin-top: 12px;
 }
@@ -5695,6 +5694,7 @@ footer .logo img {
   display: flex;
   align-items: center;
   gap: 12px;
+  z-index: 5;
 }
 
 .sticky-call-btn:hover {
@@ -5915,6 +5915,12 @@ footer .logo img {
   .contact-form {
     margin-bottom: 0px;
   }
+  .prev-arrow {
+    left: 0px;
+  }
+  .next-arrow {
+    right: 0px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
@@ -5962,6 +5968,10 @@ footer .logo img {
   .contact-form-description {
     font-size: 18px;
   }
+  .why-choose-us-item p {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -5976,7 +5986,7 @@ footer .logo img {
     flex-direction: column;
   }
   .footer-top-block p {
-    font-size: 22px;
+    font-size: 18px;
   }
   .footer-top-block a {
     font-size: 18px;
@@ -6054,6 +6064,27 @@ footer .logo img {
   .map-list-block ul li, .map-list-block h4 {
     margin: 12px auto;
   }
+  .testimonials-item {
+    padding: 36px;
+  }
+  .urgency-block {
+    padding: 32px;
+    margin-top: 0px;
+  }
+  .urgency-block a {
+    padding: 8px 16px;
+  }
+  .why-choose-us-list > div {
+    transform: unset !important;
+    margin: 20px 0px !important;
+  }
+  .why-choose-us-block {
+    margin: 8rem auto;
+    margin-bottom: 4rem;
+  }
+  .footer-top-block {
+    gap: 24px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
@@ -6071,5 +6102,8 @@ footer .logo img {
   }
   .work-vider-thumb {
     min-height: 235px;
+  }
+  .urgency-block a {
+    font-size: 16px;
   }
 }
