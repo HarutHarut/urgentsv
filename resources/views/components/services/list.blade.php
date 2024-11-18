@@ -30,7 +30,7 @@
                                 </div>
                                 <h6>{{ $service['title'] }}</h6>
                                 <p>{{ $service['description'] }}</p>
-                                <a href="/{{app()->getLocale()}}/services/{{$service['url']}}" class="learn-more-btn">Book a service</a>
+                                <a href="/{{app()->getLocale()}}/services/{{$service['url']}}" class="learn-more-btn">{{ translating('book_a_service') }}</a>
                             </div>
                         </div>
                     @endforeach

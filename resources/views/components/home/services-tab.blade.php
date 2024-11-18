@@ -10,7 +10,7 @@
                         @else
                             <h2 class="title">Our <span class="text-gradient">Expert</span> Services</h2>
                         @endif
-                        <p>Explore our wide range of home services tailored to meet your needs. From electrical repairs to plumbing, we’ve got you covered.</p>
+                        <p>{{ translating('explore_our_wide_range_of_home_services') }}</p>
                     </div>
                 </div>
             </div>
@@ -25,7 +25,7 @@
                             </div>
                             <h6>{{ $service['title'] }}</h6>
                             <p>{{ $service['description'] }}</p>
-                            <a href="/{{app()->getLocale()}}/services/{{$service['url']}}" class="learn-more-btn">Book a service</a>
+                            <a href="/{{app()->getLocale()}}/services/{{$service['url']}}" class="learn-more-btn">{{ translating('book_a_service') }}</a>
                         </div>
                     </div>
                 @endforeach
