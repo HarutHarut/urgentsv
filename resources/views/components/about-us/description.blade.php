@@ -23,7 +23,11 @@
                 </div>
             </div>
 
-            <h2 class="text-center" style="font-size: 46px; margin-top: 4rem;">Why <span class="text-gradient">choose us?</span></h2>
+            @if(app()->getLocale() == 'fr')
+                <h2 class="text-center" style="font-size: 46px; margin-top: 4rem;">Pourquoi <span class="text-gradient">nous choisir?</span></h2>
+            @else
+                <h2 class="text-center" style="font-size: 46px; margin-top: 4rem;">Why <span class="text-gradient">choose us?</span></h2>
+            @endif
 
             <div class="row why-choose-us-block justify-content-between" style="margin-top: 4rem;">
                 <div class="col-md-6 col-12 mb-4">

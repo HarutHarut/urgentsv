@@ -52,7 +52,11 @@
                 <div class="row why-choose-us-block">
                     <div class="col-md-5 text-center why-choose-us-img-column">
                         <img src="{{ $image_path }}/why-choose-us-img.png" alt="why-choose-us" />
-                        <p><span class="text-gradient">Why</span> choose us?</p>
+                        @if(app()->getLocale() == 'fr')
+                            <p><span class="text-gradient">Pourquoi</span> nous choisir?</p>
+                        @else
+                            <p><span class="text-gradient">Why</span> choose us?</p>
+                        @endif
                     </div>
                     <div class="col-md-7 why-choose-us-list">
                         <div class="d-flex align-items-center why-choose-us-item">
