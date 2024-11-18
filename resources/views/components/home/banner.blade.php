@@ -34,7 +34,7 @@
 <div class="container position-relative">
     <div class="footer-top-block mt-n5">
     <div>
-        <p class="footer-top-block-title">{{ translating('schedule_your_service_with_ease') }}Schedule Your Service with Ease</p>
+        <p class="footer-top-block-title">{{ translating('schedule_your_service_with_ease') }}</p>
         <p class="footer-top-block-desc">{{ translating('whether_you_need_a_quick_fix') }}</p>
     </div>
         <a href="tel:0525680425">
