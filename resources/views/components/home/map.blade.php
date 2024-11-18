@@ -8,7 +8,7 @@
             <h3 class="w-100 text-center mb-3">Our <span class="text-gradient">Intervention</span> Zones</h3>
         @endif
 
-        <p class="section-desc">{{ translating('our_services_are_available_all_over_the_france') }}</p>
+        <p class="section-desc">{{ translating('contact-us-description') }}</p>
         <div class="row mt-5 justify-content-center">
           <div class="col-lg-5 col-md-6">
               <img src="{{ $image_path }}/map/{{ $map->map }}" class="w-100 rounded responsive">
