@@ -15,7 +15,7 @@
                 <div class="free-contact-wrap">
 {{--                    <h3 class="title">{{ translating('contact-information') }}</h3>--}}
                     @if(app()->getLocale() == 'fr')
-                        <h3 class="title"><span class="text-gradient">Informations</span></h3>
+                        <h3 class="title"><span class="text-gradient">Informations</span> de contact</h3>
                     @else
                         <h3 class="title"><span class="text-gradient">Contact</span> information</h3>
                     @endif

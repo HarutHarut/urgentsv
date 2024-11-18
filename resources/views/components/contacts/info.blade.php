@@ -2,7 +2,7 @@
     <div class="section-title text-center px-2">
 {{--        <h2 class="text-navy">{{ translating('contact-information') }}</h2>--}}
         @if(app()->getLocale() == 'fr')
-            <h2 class="text-navy"><span class="text-gradient">Informations</span></h2>
+            <h2 class="text-navy"><span class="text-gradient">Informations</span> de contact</h2>
         @else
             <h2 class="text-navy"><span class="text-gradient">Contact</span> information</h2>
         @endif
