@@ -36,7 +36,7 @@
                             <rect x="0.201538" y="4.09229" width="28" height="28" rx="4" fill="#EFF9FF"/>
                             <path d="M16.5591 21.5498L21.2013 23.4291C22.0515 23.7736 22.9369 22.9892 22.621 22.1815L20.8852 17.7492L24.3174 14.172C24.9441 13.5194 24.4314 12.5004 23.5047 12.5504L18.4149 12.7998L15.8873 8.72569C15.4317 7.98533 14.2216 8.14078 13.9679 8.97227L12.5508 13.5433L7.56328 14.5883C6.65398 14.7742 6.41553 15.8897 7.18677 16.3627L11.4117 18.9563L10.8525 23.6834C10.751 24.5447 11.806 25.0798 12.5415 24.5317L16.5591 21.5498Z" fill="#0069AB"/>
                         </svg>
-                        <p><span>24/7 Availability</span><span>We’re here whenever you need us, day or night.<span></p>
+                        <p><span>{{ translating('24_7_availability') }}</span><span>{{ translating('we_are_here_whenever_you_need_us') }}<span></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-12 mb-4">
@@ -45,7 +45,7 @@
                             <rect x="0.201538" y="4.09229" width="28" height="28" rx="4" fill="#EFF9FF"/>
                             <path d="M16.5591 21.5498L21.2013 23.4291C22.0515 23.7736 22.9369 22.9892 22.621 22.1815L20.8852 17.7492L24.3174 14.172C24.9441 13.5194 24.4314 12.5004 23.5047 12.5504L18.4149 12.7998L15.8873 8.72569C15.4317 7.98533 14.2216 8.14078 13.9679 8.97227L12.5508 13.5433L7.56328 14.5883C6.65398 14.7742 6.41553 15.8897 7.18677 16.3627L11.4117 18.9563L10.8525 23.6834C10.751 24.5447 11.806 25.0798 12.5415 24.5317L16.5591 21.5498Z" fill="#0069AB"/>
                         </svg>
-                        <p><span>Certified Experts</span><span>Skilled team with years of experience</span></p>
+                        <p><span>{{ translating('certified_experts') }}</span><span>{{ translating('skilled_team_with_years') }}</span></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
@@ -54,7 +54,7 @@
                             <rect x="0.201538" y="4.09229" width="28" height="28" rx="4" fill="#EFF9FF"/>
                             <path d="M16.5591 21.5498L21.2013 23.4291C22.0515 23.7736 22.9369 22.9892 22.621 22.1815L20.8852 17.7492L24.3174 14.172C24.9441 13.5194 24.4314 12.5004 23.5047 12.5504L18.4149 12.7998L15.8873 8.72569C15.4317 7.98533 14.2216 8.14078 13.9679 8.97227L12.5508 13.5433L7.56328 14.5883C6.65398 14.7742 6.41553 15.8897 7.18677 16.3627L11.4117 18.9563L10.8525 23.6834C10.751 24.5447 11.806 25.0798 12.5415 24.5317L16.5591 21.5498Z" fill="#0069AB"/>
                         </svg>
-                        <p><span>Transparent Pricing</span><span>No hidden fees—just honest, upfront pricing</span></p>
+                        <p><span>{{ translating('transparent_pricing') }}</span><span>{{ translating('no_hidden_fees_just_honest') }}</span></p>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
@@ -63,14 +63,14 @@
                             <rect x="0.201538" y="4.09229" width="28" height="28" rx="4" fill="#EFF9FF"/>
                             <path d="M16.5591 21.5498L21.2013 23.4291C22.0515 23.7736 22.9369 22.9892 22.621 22.1815L20.8852 17.7492L24.3174 14.172C24.9441 13.5194 24.4314 12.5004 23.5047 12.5504L18.4149 12.7998L15.8873 8.72569C15.4317 7.98533 14.2216 8.14078 13.9679 8.97227L12.5508 13.5433L7.56328 14.5883C6.65398 14.7742 6.41553 15.8897 7.18677 16.3627L11.4117 18.9563L10.8525 23.6834C10.751 24.5447 11.806 25.0798 12.5415 24.5317L16.5591 21.5498Z" fill="#0069AB"/>
                         </svg>
-                        <p><span>Customer Satisfaction</span><span>Your comfort and safety are our top priorities</span></p>
+                        <p><span>{{ translating('customer_satisfaction') }}</span><span>{{ translating('your_comfort_and_safety') }}</span></p>
                     </div>
                 </div>
             </div>
 
             <div class="our-commitment-block">
-                <h3 class="text-gradient">Our Commitment to You</h3>
-                <p>At Urgent SVC, we don’t just fix problems; we build long-lasting relationships with our customers. From the moment you contact us, you can expect friendly, professional, and reliable service that meets your needs. We’re here to make sure that your home remains the haven it’s meant to be.</p>
+                <h3 class="text-gradient">{{ translating('our_commitment_to_you') }}</h3>
+                <p>{{ translating('at_urgent_SVC') }}</p>
             </div>
 
             <!-- <div class="footer-top-block">
