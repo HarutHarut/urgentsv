@@ -88,7 +88,7 @@
                                 <a href="{{ route(\Request::route()->getName(), ['locale' => 'fr']) }}">
                                     <img src="{{ $image_path }}/fr-flag.png" />
                                 </a>
-                            @else 
+                            @else
                                 <a href="{{ route(\Request::route()->getName(), ['locale' => 'en']) }}">
                                     <img src="{{ $image_path }}/en-flag.png" />
                                 </a>

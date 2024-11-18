@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
                 <div class="footer-widget widget">
-                    <a class="logo" href="{{ route('home', ['locale' => app()->getLocale()]) }}"><img src="{{ $image_path }}/{{ $site_data->logo }}" alt="{{ $site_data->{'title_'.app()->getLocale()} }}"></a>
+                    <a class="logo" href="{{ route('home', ['locale' => app()->getLocale()]) }}"><img src="{{ $image_path }}/header-logo" alt="{{ $site_data->{'title_'.app()->getLocale()} }}"></a>
                     <p class="pr-5">Your trusted partner in emergency situations.</p>
                     <a href="tel:0525680425" class="text-primary">
                         <svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-right: 8px; width: 18px;">
@@ -44,18 +44,18 @@
                     @endif -->
                 </div>
             </div>
-            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">
-                <div class="footer-widget widget widget_link">
-                    <h4 class="widget-title">{{ translating('links') }}</h4>
-                    @if(isset($footer_links) && count($footer_links) > 0)
-                    <ul>
-                        @foreach($footer_links as $footer_link)
-                            <li><a href="{{ $footer_link->url }}">{{ $footer_link->{'title_'.app()->getLocale()} }}</a></li>
-                        @endforeach
-                    </ul>
-                    @endif
-                </div>
-            </div>
+{{--            <div class="col-xl-2 col-lg-2 col-md-3 col-sm-6">--}}
+{{--                <div class="footer-widget widget widget_link">--}}
+{{--                    <h4 class="widget-title">{{ translating('links') }}</h4>--}}
+{{--                    @if(isset($footer_links) && count($footer_links) > 0)--}}
+{{--                    <ul>--}}
+{{--                        @foreach($footer_links as $footer_link)--}}
+{{--                            <li><a href="{{ $footer_link->url }}">{{ $footer_link->{'title_'.app()->getLocale()} }}</a></li>--}}
+{{--                        @endforeach--}}
+{{--                    </ul>--}}
+{{--                    @endif--}}
+{{--                </div>--}}
+{{--            </div>--}}
             <div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
                 <div class="footer-widget widget widget_link">
                     <h4 class="widget-title">{{ translating('services') }}</h4>
@@ -119,7 +119,7 @@
                 <p class="mb-0">{{ translating('all-rights-reserved') }}</p>
                 <!-- <div class="col-12 align-self-center">
                     <div class="copyright-area w-100 text-center">
-                        <p class="w-100">{{ translating('all-rights-reserved') }}</p>       
+                        <p class="w-100">{{ translating('all-rights-reserved') }}</p>
                         <ul style="list-style-type: none;" class="d-flex justify-content-center">
                             <li class="float-left ml-2 text-light"><a href="{{ route('terms-and-conditions', ['locale' => app()->getLocale()]) }}">{{ translating('terms-and-conditions') }}</a></li>
                             <li class="float-left ml-2 text-light"><a href="{{ route('politique-confidenalite', ['locale' => app()->getLocale()]) }}">{{ translating('privacy-policy') }}</a></li>
@@ -132,8 +132,8 @@
                     <div class="back-to-top">
                         <span class="back-top"><i class="fas fa-angle-double-up"></i></span>
                     </div>
-                </div> -->                
-            </div>                
+                </div> -->
+            </div>
         </div>
     </div>
 

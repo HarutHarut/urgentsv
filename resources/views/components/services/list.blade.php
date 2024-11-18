@@ -8,7 +8,7 @@
                         <div class="section-title text-center mb-4">
                           <!-- <h2 class="title mb-5">{{ translating('services-title') }}</h2> -->
 
-                            <h2 class="title col-md-8 mx-auto" style="margin-bottom: 6rem;">Your <span class="text-gradient">trusted parnter</span> in emergency situations.</h2>
+{{--                            <h2 class="title col-md-8 mx-auto" style="margin-bottom: 6rem;">Your <span class="text-gradient">trusted parnter</span> in emergency situations.</h2>--}}
 
                             @if(app()->getLocale() == 'fr')
                                 <h2 class="title">Prestations <span class="text-gradient">de service </span></h2>
@@ -86,7 +86,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="container mt-5">
                 <div class="footer-top-block">
                     <div>
