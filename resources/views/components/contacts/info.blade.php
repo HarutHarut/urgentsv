@@ -6,7 +6,7 @@
         @else
             <h2 class="text-navy"><span class="text-gradient">Contact</span> information</h2>
         @endif
-        <p class="contact-info-description">{{ translating('contact-us-description') }}</p>
+        <p class="contact-info-description">{{ translating('our_services_are_available_all_over_the_france') }}</p>
     </div>
     <div class="container">
         <div class="row contact-info-row position-relative pb-5 mt-lg-5">
