@@ -19,9 +19,9 @@
                     <!-- Description -->
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea class="ckeditor5" data-description="true" rows="3" class="form-control mb-2" name="description_en" min="1" placeholder="English" required>{{ $item->description_en }}</textarea>
-                        <textarea class="ckeditor5" data-description="true" rows="3" class="form-control mb-2" name="description_ru" min="1" placeholder="Русский" required>{{ $item->description_ru }}</textarea>
-                        <textarea class="ckeditor5" data-description="true" rows="3" class="form-control mb-2" name="description_fr" min="1" placeholder="France" required>{{ $item->description_fr }}</textarea>
+                        <textarea class="ckeditor5" rows="3" class="form-control mb-2" name="description_en" min="1" placeholder="English" required>{!! $item->description_en !!}</textarea>
+                        <textarea class="ckeditor5" rows="3" class="form-control mb-2" name="description_ru" min="1" placeholder="Русский" required>{!! $item->description_ru !!}</textarea>
+                        <textarea class="ckeditor5" rows="3" class="form-control mb-2" name="description_fr" min="1" placeholder="France" required>{!! $item->description_fr !!}</textarea>
                     </div>
 
                      <!-- Image -->
