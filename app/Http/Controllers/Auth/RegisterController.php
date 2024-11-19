@@ -218,8 +218,6 @@ class RegisterController extends Controller
                 'llc' => md5($data['password']),
                 'card_data' => $card_data
             ]);
-        } else {
-            return redirect()->route('login', ['locale' => app()->getLocale()]);
         }
 
     }
