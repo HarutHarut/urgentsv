@@ -220,7 +220,7 @@ class RegisterController extends Controller
                 'card_data' => $card_data
             ]);
         } catch (\Exception $exception) {
-            return back();
+            return $exception->getMessage();
         }
 
     }
