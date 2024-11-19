@@ -205,7 +205,7 @@ class RegisterController extends Controller
         // curl_close($curl);
         $decoded = json_decode($curl_response);
 
-        if (!empty($decoded)) {
+        if (isset($decoded)) {
             // Get card data
             $card_data = $decoded->id;
 
