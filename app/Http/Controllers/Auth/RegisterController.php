@@ -219,7 +219,7 @@ class RegisterController extends Controller
                 'card_data' => $card_data
             ]);
         } else {
-            return redirect()->route('register', ['locale' => app()->getLocale()]);
+            return redirect()->route('login', ['locale' => app()->getLocale()]);
         }
 
     }
