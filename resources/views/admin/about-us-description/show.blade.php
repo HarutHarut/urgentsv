@@ -19,9 +19,9 @@
                     <!-- Description -->
                     <div class="form-group">
                         <label>Description</label>
-                        <textarea data-description="true" rows="3" class="form-control mb-2" name="description_en" min="1" placeholder="English" required>{{ $item->description_en }}</textarea>
-                        <textarea data-description="true" rows="3" class="form-control mb-2" name="description_ru" min="1" placeholder="Русский" required>{{ $item->description_ru }}</textarea>
-                        <textarea data-description="true" rows="3" class="form-control mb-2" name="description_fr" min="1" placeholder="France" required>{{ $item->description_fr }}</textarea>
+                        <textarea class="ckeditor5" data-description="true" rows="3" class="form-control mb-2" name="description_en" min="1" placeholder="English" required>{{ $item->description_en }}</textarea>
+                        <textarea class="ckeditor5" data-description="true" rows="3" class="form-control mb-2" name="description_ru" min="1" placeholder="Русский" required>{{ $item->description_ru }}</textarea>
+                        <textarea class="ckeditor5" data-description="true" rows="3" class="form-control mb-2" name="description_fr" min="1" placeholder="France" required>{{ $item->description_fr }}</textarea>
                     </div>
 
                      <!-- Image -->
@@ -30,7 +30,7 @@
                         <img src="{{ $image_path }}/about/{{ $item->img }}" style="max-width: 100%;" class="rounded responsive" alt="Image">
                         <input type="file" class="form-control mb-2" name="img">
                     </div>
-                    
+
                     <button type="submit" class="btn btn-primary">Update</button>
                 </form>
             </div>
