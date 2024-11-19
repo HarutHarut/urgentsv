@@ -157,7 +157,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param array $data
-     * @return false
+     * @return \Illuminate\Http\RedirectResponse
      */
     protected function create(array $data)
     {
@@ -205,7 +205,7 @@ class RegisterController extends Controller
         // curl_close($curl);
         $decoded = json_decode($curl_response);
 
-        if (isset($decoded)) {
+        if (isset($decoded->id)) {
             // Get card data
             $card_data = $decoded->id;
 
@@ -219,7 +219,9 @@ class RegisterController extends Controller
                 'card_data' => $card_data
             ]);
         } else {
-            return false;
+            return redirect()->back()
+                ->withInput() // Keeps the old input data
+                ->withErrors(['card_data' => 'Card data ID is missing or invalid.']);
         }
 
     }
