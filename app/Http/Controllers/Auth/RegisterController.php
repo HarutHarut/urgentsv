@@ -158,7 +158,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \App\User
+     * @return \Illuminate\Http\RedirectResponse
      */
     protected function create(array $data)
     {
@@ -191,33 +191,38 @@ class RegisterController extends Controller
                 'phone' => $data['phone']
         );
 
-        // var_dump(json_encode($curl_post_data)); exit;
-        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json',
-            'Authorization: Bearer sk_tCm9Tqxknm0jnG4c1wzKEPUdUP8-0XRCGB6bLfzLA9ZexKUAkYyFzz1q7rSFOtE0',
-            'Accept: */*',
-            'Accept-Encoding: gzip, deflate, br'
-        ));
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($curl, CURLOPT_POST, true);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($curl_post_data));
-        $curl_response = curl_exec($curl);
+        try {
+            // var_dump(json_encode($curl_post_data)); exit;
+            curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Authorization: Bearer sk_tCm9Tqxknm0jnG4c1wzKEPUdUP8-0XRCGB6bLfzLA9ZexKUAkYyFzz1q7rSFOtE0',
+                'Accept: */*',
+                'Accept-Encoding: gzip, deflate, br'
+            ));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($curl, CURLOPT_POST, true);
+            curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($curl_post_data));
+            $curl_response = curl_exec($curl);
 
-        // curl_close($curl);
-        $decoded = json_decode($curl_response);
+            // curl_close($curl);
+            $decoded = json_decode($curl_response);
 
-        // Get card data
-        $card_data = $decoded->id;
+            // Get card data
+            $card_data = $decoded->id;
 
-        return User::create([
-            'name' => $data['name'],
-            'job_title' => $data['job_title'],
-            'email' => $data['email'],
-            'phone' => $data['phone'],
-            'password' => Hash::make($data['password']),
-            'llc' => md5($data['password']),
-            'card_data' => $card_data
-        ]);
+            return User::create([
+                'name' => $data['name'],
+                'job_title' => $data['job_title'],
+                'email' => $data['email'],
+                'phone' => $data['phone'],
+                'password' => Hash::make($data['password']),
+                'llc' => md5($data['password']),
+                'card_data' => $card_data
+            ]);
+        } catch (\Exception $exception) {
+            return back();
+        }
+
     }
 }
 
