@@ -31,19 +31,19 @@ class RegisterController extends Controller
     protected $redirectTo = '/fr/account';
 
     // Localizations
-    public static $locales = [ 'fr', 'en', 'ru' ];
+    public static $locales = ['fr', 'en', 'ru'];
 
     public function showRegistrationForm(Request $request)
     {
         // Check login or no
-        if(Auth::check()){
+        if (Auth::check()) {
             return redirect()->route('account', ['locale' => app()->getLocale()]);
         }
 
         // Localization
-        if(!in_array($request->segment(1), self::$locales)){
+        if (!in_array($request->segment(1), self::$locales)) {
             app()->setLocale('fr');
-        }else{
+        } else {
             app()->setLocale($request->segment(1));
         }
 
@@ -51,7 +51,7 @@ class RegisterController extends Controller
         $locale = app()->getLocale();
 
         // Get social accounts
-        $social_accounts = SocialAccounts::orderBy('position_id','asc')->get();
+        $social_accounts = SocialAccounts::orderBy('position_id', 'asc')->get();
 
         // Get menu categories
         $menu_items = Menu::orderBy('position_id', 'asc')->get();
@@ -69,7 +69,7 @@ class RegisterController extends Controller
         $site_data = SiteData::first();
 
         // Get footer links
-        $footer_links = FooterLinks::orderBy('position_id','asc')->get();
+        $footer_links = FooterLinks::orderBy('position_id', 'asc')->get();
 
         // Get service data
         $services = Services::with('items')->orderBy('position_id', 'desc')->get();
@@ -77,42 +77,41 @@ class RegisterController extends Controller
         // Get seo data
         $seo = Seo::where('page', 'register')->first();
 
-        if(!isset($_COOKIE['user_city_code'])) {
-                // Check user exiss pamrnt method or no
-                $curl = curl_init("http://api.ipstack.com/".$_SERVER['REMOTE_ADDR']."?access_key=b091bc7cd0dc1ee77f3f296db8c60145&format=1");
+        if (!isset($_COOKIE['user_city_code'])) {
+            // Check user exiss pamrnt method or no
+            $curl = curl_init("http://api.ipstack.com/" . $_SERVER['REMOTE_ADDR'] . "?access_key=b091bc7cd0dc1ee77f3f296db8c60145&format=1");
 
-                // var_dump(json_encode($curl_post_data)); exit;
-                curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-                    'Content-Type: application/json',
-                    'Accept: */*',
-                    'Accept-Encoding: gzip, deflate, br'
-                ));
-                curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-                $curl_response = curl_exec($curl);
+            // var_dump(json_encode($curl_post_data)); exit;
+            curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+                'Content-Type: application/json',
+                'Accept: */*',
+                'Accept-Encoding: gzip, deflate, br'
+            ));
+            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+            $curl_response = curl_exec($curl);
 
-                $decoded = json_decode($curl_response);
+            $decoded = json_decode($curl_response);
 
-                if(isset($decoded->region_code)){
-                    setcookie('user_city_code', $decoded->region_code, time() + (86400 * 30 * 365), "/"); // 86400 = 1 day
-                }
-
-                if(isset($decoded) && isset($decoded->region_code)){
-	                $user_number = PhoneNumbers::where('location', $decoded->region_code)->first();
-            	}else{
-	                $user_number = NULL;
-            	}
-            }else{
-                $user_number = PhoneNumbers::where('location', $_COOKIE['user_city_code'])->first();
+            if (isset($decoded->region_code)) {
+                setcookie('user_city_code', $decoded->region_code, time() + (86400 * 30 * 365), "/"); // 86400 = 1 day
             }
 
-
-
-            if($user_number == NULL){
-                $locc = 'value_'.app()->getLocale();
-                $user_number = $phone_numbers->first()->$locc;
-            }else{
-                $user_number = $user_number->phone;
+            if (isset($decoded) && isset($decoded->region_code)) {
+                $user_number = PhoneNumbers::where('location', $decoded->region_code)->first();
+            } else {
+                $user_number = NULL;
             }
+        } else {
+            $user_number = PhoneNumbers::where('location', $_COOKIE['user_city_code'])->first();
+        }
+
+
+        if ($user_number == NULL) {
+            $locc = 'value_' . app()->getLocale();
+            $user_number = $phone_numbers->first()->$locc;
+        } else {
+            $user_number = $user_number->phone;
+        }
 
         // Make data array
         $data = array(
@@ -127,7 +126,7 @@ class RegisterController extends Controller
             'services' => $services,
             'user_number' => $user_number,
             'seo' => $seo,
-           'image_path' => '/public/assets/img',
+            'image_path' => '/public/assets/img',
             // 'image_path' => '/assets/img',
             'private_email' => 'info@intervention-urgence24-7@gmail.com',
         );
@@ -139,7 +138,7 @@ class RegisterController extends Controller
     /**
      * Get a validator for an incoming registration request.
      *
-     * @param  array  $data
+     * @param array $data
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
@@ -157,8 +156,8 @@ class RegisterController extends Controller
     /**
      * Create a new user instance after a valid registration.
      *
-     * @param  array  $data
-     * @return \Illuminate\Http\RedirectResponse
+     * @param array $data
+     * @return false
      */
     protected function create(array $data)
     {
@@ -167,7 +166,7 @@ class RegisterController extends Controller
             <html>
                 <body>
                     <h1>Email Confirm</h1>
-                    <a href="'.route('verify', ['locale' => app()->getLocale(), 'email' => md5($data['email'])]).'">'.translating('confirm').'</a>
+                    <a href="' . route('verify', ['locale' => app()->getLocale(), 'email' => md5($data['email'])]) . '">' . translating('confirm') . '</a>
                 </body>
             </html>
         ';
@@ -176,8 +175,8 @@ class RegisterController extends Controller
         $headers = '';
         $headers .= "MIME-Version: 1.0" . "\r\n";
         $headers .= "Content-type: text/html; charset=UTF-8" . "\r\n";
-        $headers .= 'From: '.'info@intervention-urgence24-7.com' . "\r\n";
-        $headers .= 'Cc: '.'info@intervention-urgence24-7.com'."\r\n";
+        $headers .= 'From: ' . 'info@intervention-urgence24-7.com' . "\r\n";
+        $headers .= 'Cc: ' . 'info@intervention-urgence24-7.com' . "\r\n";
 
         // Sending to admin process
         $send_adimn = mail($data['email'], translating('email-confirm'), $body, $headers);
@@ -185,28 +184,28 @@ class RegisterController extends Controller
         $curl = curl_init('https://merchant.revolut.com/api/1.0/customers');
 
         $curl_post_data = array(
-                'full_name' => $data["name"],
-                'business_name' => "Intervention Urgance",
-                'email' => $data['email'],
-                'phone' => $data['phone']
+            'full_name' => $data["name"],
+            'business_name' => "Intervention Urgance",
+            'email' => $data['email'],
+            'phone' => $data['phone']
         );
 
-        try {
-            // var_dump(json_encode($curl_post_data)); exit;
-            curl_setopt($curl, CURLOPT_HTTPHEADER, array(
-                'Content-Type: application/json',
-                'Authorization: Bearer sk_tCm9Tqxknm0jnG4c1wzKEPUdUP8-0XRCGB6bLfzLA9ZexKUAkYyFzz1q7rSFOtE0',
-                'Accept: */*',
-                'Accept-Encoding: gzip, deflate, br'
-            ));
-            curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($curl, CURLOPT_POST, true);
-            curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($curl_post_data));
-            $curl_response = curl_exec($curl);
+        // var_dump(json_encode($curl_post_data)); exit;
+        curl_setopt($curl, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json',
+            'Authorization: Bearer sk_tCm9Tqxknm0jnG4c1wzKEPUdUP8-0XRCGB6bLfzLA9ZexKUAkYyFzz1q7rSFOtE0',
+            'Accept: */*',
+            'Accept-Encoding: gzip, deflate, br'
+        ));
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($curl, CURLOPT_POST, true);
+        curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($curl_post_data));
+        $curl_response = curl_exec($curl);
 
-            // curl_close($curl);
-            $decoded = json_decode($curl_response);
+        // curl_close($curl);
+        $decoded = json_decode($curl_response);
 
+        if (!empty($decoded)) {
             // Get card data
             $card_data = $decoded->id;
 
@@ -219,8 +218,8 @@ class RegisterController extends Controller
                 'llc' => md5($data['password']),
                 'card_data' => $card_data
             ]);
-        } catch (\Exception $exception) {
-            return $exception->getMessage();
+        } else {
+            return false;
         }
 
     }
