@@ -219,9 +219,7 @@ class RegisterController extends Controller
                 'card_data' => $card_data
             ]);
         } else {
-            return redirect()->back()
-                ->withInput() // Keeps the old input data
-                ->withErrors(['card_data' => 'Card data ID is missing or invalid.']);
+            return redirect()->route('register');
         }
 
     }
