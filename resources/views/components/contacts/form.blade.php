@@ -5,12 +5,12 @@
                 <div class="section-title text-left">
     {{--                <h1>{{ translating('contact-us-message-title') }}</h1>--}}
                     @if(app()->getLocale() == 'fr')
-                        <h1>Un <span class="text-gradient">message</span></h1>
+                        <h1>Besoin <span class="text-gradient">d’aide</span></h1>
                     @else
-                        <h1>Need Assistance?</h1>
+                        <h1>Need <span class="text-gradient">Assistance?</span></h1>
                     @endif
                     <!-- <p class="contact-form-description">{{ translating('contact-us-message-description') }}</p> -->
-                    <p class="contact-form-description">We’re here to help 24/7. Call us for immediate support, or email for quick responses</p>
+                    <p class="contact-form-description">{{ translating('We_are_here_to_help_24_7') }}</p>
                 </div>
                 <div class="form contact-form">
                     <form success="{{ translating('success-message') }}" error="{{ translating('error-message') }}" action="{{ route('send-message', ['locale' => app()->getLocale()]) }}" id="messageForm" method="post" class="contactForm">
