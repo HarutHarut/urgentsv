@@ -2,7 +2,7 @@
 <div class="content-wrapper">
     <section class="about-area pd-top-100 pd-bottom-100">
         <div class="container">
-            <div class="row justify-content-center">
+            <div class="row justify-content-center align-items-center">
                 <div class="col-lg-6 col-md-8 d-md-block d-none">
                     <div class="thumb">
                         <img src="{{ $image_path }}/about/{{ $description->img }}" alt="img">
