@@ -130,7 +130,7 @@ class Index
             $request->data = $data;
 
             // Send data to controller
-//            return $next($request);
+            return $next($request);
         }else{
             if(Auth::check()){
                 if(Auth::user()->role != 'admin' && Auth::user()->role != 'editor'){
@@ -219,7 +219,7 @@ class Index
 
 
                 // Send data to controller
-                return $next($request);
+//                return $next($request);
             }else{
                 // Redirect 404
                 abort('404');
