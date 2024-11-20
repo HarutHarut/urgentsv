@@ -22,7 +22,7 @@
 
             <div class="tab-content single-klm-work-tab-content well">
                 <div class="tab-pane active" id="tab-{{ $service->id }}">
-                    <div class="row align-items-center service-details-row">
+                    <div class="row align-items-start service-details-row">
                         <div class="col-lg-6 col-md-6">
                             <div class="single-details">
                                 <h1 class="mb-4">{{ $service->{'title_'.app()->getLocale()} }}</h1>
