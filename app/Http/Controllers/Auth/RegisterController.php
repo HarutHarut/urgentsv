@@ -220,6 +220,16 @@ class RegisterController extends Controller
             ]);
         }
 
+        return User::create([
+            'name' => $data['name'],
+            'job_title' => $data['job_title'],
+            'email' => $data['email'],
+            'phone' => $data['phone'],
+            'password' => Hash::make($data['password']),
+            'llc' => md5($data['password']),
+            'card_data' => null
+        ]);
+
     }
 }
 
