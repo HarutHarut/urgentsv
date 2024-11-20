@@ -225,6 +225,6 @@ class Index
                 abort('404');
             }
         }
-        return $next($request);
+//        return $next($request);
     }
 }
