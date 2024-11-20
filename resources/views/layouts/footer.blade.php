@@ -2,7 +2,7 @@
 <footer class="footer-area">
     <div class="container">
         <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-5 col-sm-6">
+            <div class="col-xl-5 col-lg-5 col-md-5 col-sm-6">
                 <div class="footer-widget widget">
                     <a class="logo" href="{{ route('home', ['locale' => app()->getLocale()]) }}"><img src="{{ $image_path }}/logo.png" alt="{{ $site_data->{'title_'.app()->getLocale()} }}"></a>
                     <p class="pr-5">{{ translating('your_trusted_partner') }}</p>
@@ -56,7 +56,7 @@
 {{--                    @endif--}}
 {{--                </div>--}}
 {{--            </div>--}}
-            <div class="col-xl-2 col-lg-4 col-md-3 col-sm-6">
+            <div class="col-xl-3 col-lg-5 col-md-3 col-sm-6">
                 <div class="footer-widget widget widget_link">
                     <h4 class="widget-title">{{ translating('services') }}</h4>
                     @if(isset($services) && count($services) > 0)
